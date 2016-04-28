@@ -2,7 +2,6 @@ package org.tyusupov
 
 import grails.test.mixin.TestMixin
 import grails.test.mixin.domain.DomainClassUnitTestMixin
-import org.tyusupov.TestObj
 import spock.lang.Specification
 
 /**
@@ -14,6 +13,7 @@ class TestSpec extends Specification {
 
     def setup() {
         new TestObj(name: "name").save(failOnError: false, flush: true)
+        new TestObj2(name: "name").save(failOnError: false, flush: true)
     }
 
     def "test"() {
