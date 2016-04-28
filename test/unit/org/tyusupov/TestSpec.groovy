@@ -1,5 +1,6 @@
 package org.tyusupov
 
+import grails.test.mixin.Mock
 import grails.test.mixin.TestMixin
 import grails.test.mixin.domain.DomainClassUnitTestMixin
 import spock.lang.Specification
@@ -9,6 +10,7 @@ import spock.lang.Specification
  * @date 2016-04-28.
  */
 @TestMixin(DomainClassUnitTestMixin)
+@Mock([TestObj, TestObj2])
 class TestSpec extends Specification {
 
     def setup() {
